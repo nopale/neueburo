@@ -4,19 +4,73 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="generator" content="NeueBüro, the executive arm of NeueHaus" />
+		<title>NeueBüro, The Executive Arm of NeueHaus</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
+	@font-face {
+		font-family: 'Serrif';
+		src: url('/Serrif-TRIAL-Light.woff2') format('woff2');
+		font-weight: 300;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Serrif';
+		src: url('/Serrif-TRIAL-Regular.woff2') format('woff2');
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Serrif';
+		src: url('/Serrif-TRIAL-Medium.woff2') format('woff2');
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Saans';
+		src: url('/Saans-TRIAL-Medium.woff2') format('woff2');
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Saans';
+		src: url('/Saans-TRIAL-SemiBold.woff2') format('woff2');
+		font-weight: 600;
+		font-style: normal;
+		font-display: swap;
+	}
+
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		font-family: 'Serrif', serif;
+		font-size: 14px;
+		color: rgb(176, 176, 176);
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: 'Saans', sans-serif;
+		font-weight: 400;
+		margin: 0;
 	}
 </style>

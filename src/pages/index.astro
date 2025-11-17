@@ -7,5 +7,116 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<div class="background-placeholder">
+		<div class="content">
+			<div></div>
+
+			<div class="inner">
+				<img src="/src/assets/neueburo.svg" />
+				<h1>The executive arm of <a href="https://neuehaus.io">NeueHaus</a></h1>
+			</div>
+
+			<div class="table">
+				<div class="cell">
+					<div class="header">
+						<p>Services</p>
+					</div>
+
+					<div class="inner-cell">
+						<p>Creative Engineering</p>
+						<p>Cult Experiences</p>
+						<p>Corporate Elegance</p>
+					</div>
+				</div>
+
+				<div class="cell">
+					<div class="header">
+						<p>Contact</p>
+					</div>
+
+					<div class="inner-cell">
+						<p>contact@neuehaus.io</p>
+						<p style="opacity: 0; pointer-events: none; user-select: none;">
+							Creative Engineering
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </Layout>
+
+<style>
+	.background-placeholder {
+		position: relative;
+		background-color: black;
+		overflow: hidden;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.background-placeholder .content {
+		display: flex;
+		flex-direction: column;
+		height: 80%;
+		gap: 2rem;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.inner {
+		width: auto;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		margin-top: 6rem;
+	}
+
+	.background-placeholder .content h1 {
+		color: rgb(176, 176, 176);
+		font-size: 14px;
+		font-weight: 200;
+		text-align: center;
+	}
+	.background-placeholder .content h1 a {
+		color: white;
+		text-decoration: none;
+	}
+
+	.background-placeholder img {
+		width: 120px;
+	}
+
+	.table {
+		display: flex;
+	}
+
+	.table .cell .header {
+		border: 1px solid #464646;
+		padding: 4px 8px;
+	}
+
+	.table .cell:last-child .header {
+		border-left: 0;
+	}
+
+	.table .header p {
+		margin: 0;
+		font-size: 16px;
+		font-family: 'Saans', sans-serif;
+	}
+
+	.inner-cell {
+		padding: 8px;
+	}
+
+	.inner-cell p {
+		margin: 0 0 4px 0;
+        font-size: 12px;
+	}
+</style>
